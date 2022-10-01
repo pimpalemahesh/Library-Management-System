@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-<style media="screen">
-.btn-circle.btn-xl {
-  width: 70px;
-  height: 70px;
-  padding: 10px 16px;
-  border-radius: 35px;
-  font-size: 24px;
-  line-height: 1.33;
-}
 
-.btn-circle {
-  width: 30px;
-  height: 30px;
-  padding: 6px 0px;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.42857;
-}
+<head>
+  <style media="screen">
+    body{
+      color: white;
+      background: #333 url("static/images/lib1.png") no-repeat center center/cover;
+    }
+    .btn-circle.btn-xl {
+      width: 70px;
+      height: 70px;
+      padding: 10px 16px;
+      border-radius: 35px;
+      font-size: 24px;
+      line-height: 1.33;
+    }
 
-.jumbotron{
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.jumbotron h1{
-  text-align: center;
-}
+    p{
+      color: white;
+    }
 
+    .btn-circle {
+      width: 30px;
+      height: 30px;
+      padding: 6px 0px;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.42857;
+    }
 
-</style>
-  </head>
-  <body>
-    {% include "library/navbarstudent.html" %}
-    <br>
-    <br>
-    <center><h3 style=" margin-bottom: 0px;"class = 'alert alert-success'>Welcome to Online library !</h3></center>
-    <div class="jumbotron"   style="    margin-bottom: 0px;">
-    <h1 class="display-4">Hello {{user.first_name}} !</h1>
-    <p class="lead">As you are Student, you can see how many book you have taken from library with fine and many more ...!
-    </p>
+    .mainpage {
+      margin-top: 100px;
+      margin-bottom: 0px;
+      height: 80vh;
+    }
+
+    .mainpage h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  {% include "library/navbarstudent.html" %}
+  <br>
+  <br>
+  <div class="mainpage" style="    margin-bottom: 0px;">
+    <h1>Hello {{user.first_name}} !</h1>
+    <p class="lead mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ipsum hic illo in labore libero nobis exercitationem quam ullam commodi molestiae necessitatibus praesentium, numquam tempore odio beatae optio rerum voluptatum.</p>
     <hr class="my-4">
-    <p>Option Available For You</p>
-    <div class="options" style="text-align:center">
-      <a href="viewissuedbookbystudent" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">View issued book to you</a><br><br>
-        </div>
-
+    <h3 class="text-info text-center my-5">See your requirement are fullfilled by admins or not</h3>
+    <div class="options text-success" style="text-align:center">
+      <a href="viewissuedbookbystudent" class="btn btn-success btn-lg text-warning active" role="button" aria-pressed="true">View</a><br><br>
     </div>
 
+  </div>
 
-    {% include "library/footer.html" %}
-  </body>
+
+  {% include "library/footer.html" %}
+</body>
+
 </html>

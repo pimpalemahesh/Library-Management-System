@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -12,10 +13,12 @@
 
     <title>LazyCoder || sumit</title>
     <style media="screen">
-    .jumbotron{
+    .mainpage{
       margin-bottom: 0px;
+      margin-top: 80px;
+      height: 100vh;
     }
-    .jumbotron h1{
+    .mainpage h1{
       text-align: center;
     }
     </style>
@@ -24,14 +27,23 @@
   <body>
       {% include "library/navbar.html" %}
 <br><br>
-      <div class="jumbotron">
-        <h1 class="display-4">Hello, Student</h1>
+      <div class="mainpage">
+        <h1>Hello, Students!!!</h1>
         <p class="lead">Welcome to Online Library Management System.</p>
         <hr class="my-4">
-        <p>You can access various features after Login.</p>
+        
+
+        <center>
+          <div class="col-lg-6">
+            <img src="{% static "images/student.png" %}" width="30%" height="50%" alt=""><br><br>
+          </div>
+        </center>
+       
+
+        <p class="text-primary">Login else Don't have account create one!.</p>
         <p class="lead">
           <a class="btn btn-primary btn-lg" href="studentsignup" role="button">SignUp</a>
-          <a class="btn btn-primary btn-lg" href="studentlogin" role="button">Login</a>
+          <a class="btn btn-secondary btn-lg" href="studentlogin" role="button">Login</a>
         </p>
       </div>
 

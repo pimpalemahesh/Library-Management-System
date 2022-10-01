@@ -1,41 +1,73 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <title>LazyCoder || sumit</title>
+  <style>
+    .contact-title {
+      margin-top: 28px;
+      color: blue;
+      text-align: center;
+      align-items: center;
+      size: 24px;
+      font-size: xx-large;
+    }
 
-    <title>LazyCoder || sumit</title>
+    .form-group{
+      display: inline-block;
+      width: auto;
+      background-color: rgb(158, 205, 100);
+      align-items: flex-end;
+      padding: 32px;
+      border-radius: 20px;
+    }
 
+    .form-group h1{
+      color: blue;
+      text-align: left;
+    }
 
-  </head>
-  <body>
+    .form-group input, textarea{
+      width: 100%;
+      border: 2px solid blue;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
 
-    {% include "library/navbar.html" %}
-<br><br>
+  </style>
 
-<center>
-        <h3 class = 'alert alert-success'>Send Us Your Valuable Feedback !</h3>
+</head>
+
+<body>
+
+  {% include "library/navbar.html" %}
+  <br><br>
+
+  <center>
+    <h3 class="contact-title">Send Us Feedback !</h3>
 
     <form method="POST">
-        <!-- Very Important csrf Token -->
-        {% csrf_token %}
-        <div class = "form-group">
-            <p>
-            <h3>{{ form.as_p }}</h3>
+      <!-- Very Important csrf Token -->
+      {% csrf_token %}
+      <div class="form-group">
+        <p>
+        <h3>{{ form.as_p }}</h3>
         </p>
-            <br>
-            <input type="submit" value="Send Message" class = 'btn btn-primary btn-lg'>
-                </div>
-            </form>
-        </center>
-    {% include "library/footer.html" %}
-  </body>
+        <br>
+        <input type="submit" value="Send" class='btn btn-primary btn-lg'>
+      </div>
+    </form>
+  </center>
+  {% include "library/footer.html" %}
+</body>
+
 </html>
