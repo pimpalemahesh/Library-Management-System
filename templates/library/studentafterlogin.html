@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System | Student |</title>
   <style media="screen">
-    body{
+    body {
       color: white;
       background: #333 url("static/images/lib1.png") no-repeat center center/cover;
     }
+
     .btn-circle.btn-xl {
       width: 70px;
       height: 70px;
@@ -16,7 +20,7 @@
       line-height: 1.33;
     }
 
-    p{
+    p {
       color: white;
     }
 
@@ -48,17 +52,18 @@
   <br>
   <div class="mainpage" style="    margin-bottom: 0px;">
     <h1>Hello {{user.first_name}} !</h1>
-    <p class="lead mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ipsum hic illo in labore libero nobis exercitationem quam ullam commodi molestiae necessitatibus praesentium, numquam tempore odio beatae optio rerum voluptatum.</p>
+    <p class="lead mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ipsum hic illo in labore libero
+      nobis exercitationem quam ullam commodi molestiae necessitatibus praesentium, numquam tempore odio beatae optio
+      rerum voluptatum.</p>
     <hr class="my-4">
     <h3 class="text-info text-center my-5">See your requirement are fullfilled by admins or not</h3>
     <div class="options text-success" style="text-align:center">
-      <a href="viewissuedbookbystudent" class="btn btn-success btn-lg text-warning active" role="button" aria-pressed="true">View</a><br><br>
+      <a href="viewissuedbookbystudent" class="btn btn-success btn-lg text-warning active" role="button"
+        aria-pressed="true">View</a><br><br>
     </div>
 
   </div>
 
-
   {% include "library/footer.html" %}
 </body>
-
 </html>

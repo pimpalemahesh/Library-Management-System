@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System | Admin |</title>
   <style media="screen">
-
-    body{
+    body {
       height: 100vh;
+      padding: 40px;
     }
+
     table.redTable {
-      border: 2px solid #A40808;
-      background-color: #EEE7DB;
+      border: 2px solid #000000;
+      background-color: #000000;
+      color: white;
       width: 100%;
       text-align: center;
       border-collapse: collapse;
@@ -30,7 +35,7 @@
     }
 
     table.redTable thead {
-      background: #A40808;
+      background: rgb(26, 212, 42);
     }
 
     table.redTable thead th {
@@ -38,7 +43,7 @@
       font-weight: bold;
       color: #FFFFFF;
       text-align: center;
-      border-left: 2px solid #A40808;
+      border-left: 2px solid #000000;
     }
 
     table.redTable thead th:first-child {
@@ -49,7 +54,7 @@
       font-size: 13px;
       font-weight: bold;
       color: #FFFFFF;
-      background: #A40808;
+      background: #000000;
     }
 
     table.redTable tfoot td {
@@ -63,7 +68,7 @@
     table.redTable tfoot .links a {
       display: inline-block;
       background: #FFFFFF;
-      color: #A40808;
+      color: #000000;
       padding: 2px 8px;
       border-radius: 5px;
     }
@@ -74,7 +79,6 @@
   {% include "library/navbaradmin.html" %}
   <br>
   <br>
-  <h3 class="p-3 mb-2" style='font-size: 50px;text-align:center;'>Available Book in Library !</h3>
   {% if books%}
   <table class="redTable">
     <thead>
