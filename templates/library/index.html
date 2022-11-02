@@ -26,6 +26,40 @@
 .jumbotron{
   margin-bottom: 0px;
   width: 80vh;
+  z-index: -1;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.centered p {
+  font-size: 20px;
+  font-weight: 100px;
+  text-align: center;
+  color: white;
+}
+
+.about-btn{
+  font-size: 20px;
+  color: black;
+  padding: 8px;
+  background-color: white;
+  border: 2px solid rgb(60, 60, 66);
+  border-radius: 20px;
+}
+
+.about-btn:hover {
+  background-color: rgb(107, 112, 116);
+  color: white;
 }
 
 </style>
@@ -35,6 +69,11 @@
 {% include "library/navbar.html" %}
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="centered">
+    Welcome to Your Library
+    <p>Your Search for book ends here!</p>
+    <a class="btn btn-lg about-btn" href="aboutus" role="button">About Us</a>
+  </div>
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
